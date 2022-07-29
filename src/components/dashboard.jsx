@@ -98,7 +98,7 @@ function Dashboard() {
           {/* <div>Performance Outlet</div>
           <div>Performance per Item</div> */}
         </div>
-        <div className="w-full">
+        <div className="w-full mt-6 md:mt-0">
           {chart === "overall" && <Stacked title={title} />}
           {chart === "cabang" && (
             <div className="w-full flex flex-col gap-5">

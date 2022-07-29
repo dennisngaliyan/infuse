@@ -15,7 +15,7 @@ function Main() {
       <div className={`${hide ? "hide-menu" : "show-menu"} z-50 bg-primary`}>
         <div className="w-full p-5">
           <div className="flex justify-between items-center">
-            <img className="w-[8rem] h-[4rem] lg:h-[3rem]" src={Images.logo} alt="" />
+            <img className="w-[8rem] h-[3rem]" src={Images.logo} alt="" />
             <img onClick={() => setHide(true)} className="lg:hidden w-[2rem] h-[2rem]" src={Images.back} alt="" />
           </div>
           <div className="flex flex-col text-white mt-12 gap-5">
@@ -26,7 +26,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <div className="w-full max-h-screen" style={{ overflowY: "auto" }}>
+      <div className="w-full max-h-screen pb-12 md:pb-0" style={{ overflowY: "auto" }}>
         <div className="w-full flex p-5 justify-between">
           <img onClick={() => setHide(!hide)} className="w-[2rem] h-[2rem] cursor-pointer" src={Images.menu} alt="" />
           <img onClick={() => navigate("/")} className="w-[2rem] h-[2rem] cursor-pointer" src={Images.exit} alt="" />

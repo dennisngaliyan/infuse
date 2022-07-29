@@ -59,15 +59,17 @@ function Report() {
           </tr>
         </table>
       </div>
-      <div className="w-full mt-12">
+      <div className="w-full flex flex-col gap-5 md:gap-0 md:flex-row justify-between md:items-center mt-12">
         <div className="text-xl">Download as :</div>
-        <div className="flex items-center gap-1 mt-2">
-          <img className="w-[2rem] h-[2rem]" src={Images.pdf} alt="" />
-          <div>PDF</div>
-        </div>
-        <div className="flex items-center gap-1 mt-2">
-          <img className="w-[2rem] h-[2rem]" src={Images.xls} alt="" />
-          <div>XLS</div>
+        <div className="flex gap-5 items-center">
+          <div className="flex items-center gap-1 mt-2">
+            <img className="w-[2rem] h-[2rem]" src={Images.pdf} alt="" />
+            <div>PDF</div>
+          </div>
+          <div className="flex items-center gap-1 mt-2">
+            <img className="w-[2rem] h-[2rem]" src={Images.xls} alt="" />
+            <div>XLS</div>
+          </div>
         </div>
       </div>
     </div>

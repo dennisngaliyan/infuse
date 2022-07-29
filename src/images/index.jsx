@@ -11,6 +11,8 @@ import xls from "./xls.svg";
 import up from "./up.svg";
 import down from "./down.svg";
 import dropdown from "./dropdown.svg";
+import notification from "./notification.svg";
+import close from "./close.svg";
 
 const Images = {
   logo: logo,
@@ -26,6 +28,8 @@ const Images = {
   up: up,
   down: down,
   dropdown: dropdown,
+  notification: notification,
+  close: close,
 };
 
 export default Images;
