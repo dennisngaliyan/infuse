@@ -84,7 +84,7 @@ function Stacked({ title }) {
       series.dataFields.categoryX = "country";
       series.name = "Year 2017";
       series.clustered = false;
-      series.columns.template.tooltipText = "GDP grow in {category} (2017): [bold]{valueY}%[/]";
+      series.columns.template.tooltipText = "GDP grow in {category} (2021): [bold]{valueY}%[/]";
       series.columns.template.fillOpacity = 0.9;
 
       var series2 = chart.series.push(new am4charts.ColumnSeries3D());
@@ -92,7 +92,7 @@ function Stacked({ title }) {
       series2.dataFields.categoryX = "country";
       series2.name = "Year 2018";
       series2.clustered = false;
-      series2.columns.template.tooltipText = "GDP grow in {category} (2017): [bold]{valueY}%[/]";
+      series2.columns.template.tooltipText = "GDP grow in {category} (2022): [bold]{valueY}%[/]";
     }); // end am4core.ready()
   }, [title]);
   return <div className="w-full h-[30rem]" ref={stackContainer}></div>;
