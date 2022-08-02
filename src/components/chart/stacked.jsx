@@ -24,37 +24,37 @@ function Stacked({ title, setDetailActive, colorBar }) {
         {
           country: "KC A",
           year2017: 97.5,
-          year2018: 98.5,
+          year2018: 98.4,
         },
         {
           country: "KC B",
           year2017: 99.2,
-          year2018: 99,
+          year2018: 99.2,
         },
         {
           country: "KC C",
           year2017: 100.9,
-          year2018: 100.5,
+          year2018: 100.4,
         },
         {
           country: "KC D",
           year2017: 100.0,
-          year2018: 98.5,
+          year2018: 98.9,
         },
         {
           country: "KC E",
           year2017: 99.8,
-          year2018: 99.5,
+          year2018: 99.7,
         },
         {
           country: "KC F",
           year2017: 101.2,
-          year2018: 100,
+          year2018: 100.1,
         },
         {
           country: "KC G",
           year2017: 101.1,
-          year2018: 101.5,
+          year2018: 101.9,
         },
         // {
         //   country: "India",
