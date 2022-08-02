@@ -60,6 +60,7 @@ function Line() {
       categoryAxis.dataFields.category = "year";
       categoryAxis.startLocation = 0.4;
       categoryAxis.endLocation = 0.6;
+      categoryAxis.renderer.fontWeight = 600;
 
       var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       valueAxis.tooltip.disabled = true;

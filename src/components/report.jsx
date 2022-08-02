@@ -16,17 +16,17 @@ function Report() {
     <div className="p-5 border border-black rounded-md">
       <div className="text-xl">Posting date : {new Date().toISOString().slice(0, 10)}</div>
       <div className="flex items-center gap-5 mt-6">
-        <div style={{ borderRadius: "0,0,20px,20px" }} onClick={() => setCurrentTable("jenis")} className={`p-3 bg-primary text-black cursor-pointer ${currentTable === "jenis" ? "bg-[#1363DF] text-white" : ""}`}>
+        <div style={{ borderRadius: "0 0 20px 20px" }} onClick={() => setCurrentTable("jenis")} className={`p-3 text-white cursor-pointer ${currentTable === "jenis" ? "bg-primary" : "bg-blue"}`}>
           Berdasarkan Jenis
         </div>
-        <div style={{ borderRadius: "0,0,20px,20px" }} onClick={() => setCurrentTable("cabang")} className={`p-3 bg-primary text-black cursor-pointer ${currentTable === "cabang" ? "bg-[#1363DF] text-white" : ""}`}>
+        <div style={{ borderRadius: "0 0 20px 20px" }} onClick={() => setCurrentTable("cabang")} className={`p-3 text-white cursor-pointer ${currentTable === "cabang" ? "bg-primary" : "bg-blue"}`}>
           Berdasarkan Cabang
         </div>
       </div>
       {currentTable === "jenis" && (
         <div className="max-w-[100%]" style={{ overflowX: "auto" }}>
           <table className="w-full mt-10">
-            <tr className="bg-primary text-black">
+            <tr className="bg-primary text-white">
               <td rowSpan={2}>Kinerja</td>
               <td>Realisasi</td>
               <td colSpan={2}>Target</td>
@@ -34,7 +34,7 @@ function Report() {
               <td colSpan={2}>Realisasi thd 31 Dec 2021</td>
               <td colSpan={2}>% Achievement vs Target</td>
             </tr>
-            <tr className="bg-primary text-black">
+            <tr className="bg-primary text-white">
               <td>31-Dec-21</td>
               <td>Full Year</td>
               <td>Prop</td>
@@ -65,7 +65,7 @@ function Report() {
                 return <td>{x}</td>;
               })}
             </tr>
-            <tr className="bg-primary text-black">
+            <tr className="bg-primary text-white">
               {totalList.map((x) => {
                 return <td>{x}</td>;
               })}
@@ -76,14 +76,14 @@ function Report() {
       {currentTable === "cabang" && (
         <div className="max-w-[100%]" style={{ overflowX: "auto" }}>
           <table className="w-full mt-10">
-            <tr className="bg-primary text-black">
+            <tr className="bg-primary text-white">
               <td rowSpan={2}>Nama Cabang</td>
               <td colSpan={3}>Tabungan</td>
               <td colSpan={3}>Deposito</td>
               <td colSpan={3}>Giro</td>
               <td colSpan={3}>Total DPK</td>
             </tr>
-            <tr className="bg-primary text-black">
+            <tr className="bg-primary text-white">
               <td>Pragnosa</td>
               <td>Realisasi</td>
               <td>%-tase</td>
@@ -116,7 +116,7 @@ function Report() {
                 </tr>
               );
             })}
-            <tr className="bg-primary text-black">
+            <tr className="bg-primary text-white">
               <td>TOTAL</td>
               <td>205,226</td>
               <td>205,226</td>

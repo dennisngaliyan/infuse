@@ -15,7 +15,7 @@ function Bar({ title }) {
       // Create chart instance
       var chart = am4core.create(stackContainer.current, am4charts.XYChart3D);
 
-      chart.colors.list = [am4core.color("#FFF89C"), am4core.color("#1363DF")];
+      chart.colors.list = [am4core.color("#F7EC09"), am4core.color("#1363DF")];
 
       // Add data
       chart.data = [
@@ -30,7 +30,7 @@ function Bar({ title }) {
           year2018: 99.7,
         },
         {
-          country: "Depostio",
+          country: "Depostito",
           year2017: 107.3,
           year2018: 108.2,
         },
@@ -46,6 +46,7 @@ function Bar({ title }) {
       categoryAxis.dataFields.category = "country";
       categoryAxis.renderer.grid.template.location = 0;
       categoryAxis.renderer.minGridDistance = 30;
+      categoryAxis.renderer.fontWeight = 600;
 
       var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       // valueAxis.title.text = `Overall Performance (${title})`;

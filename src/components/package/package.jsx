@@ -5,41 +5,43 @@ import Pie from "../chart/pie";
 
 function Package() {
   return (
-    <div className="grid grid-cols-3 gap-6">
+    <div className="flex flex-col lg:grid grid-cols-3 gap-6">
       <div className="col-span-2 w-full">
         <div className="font-semibold">Target vs Realisasi</div>
-        <table className="w-full mt-2">
-          <tr className="font-semibold">
-            <td>Item</td>
-            <td>Full Year</td>
-            <td>Proporsional</td>
-            <td>Realisasi</td>
-          </tr>
-          <tr>
-            <td>Tabungan</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-          </tr>
-          <tr>
-            <td>Giro</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-          </tr>
-          <tr>
-            <td>Deposito</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-          </tr>
-          <tr className="font-semibold">
-            <td>Total</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-            <td>212.366.039</td>
-          </tr>
-        </table>
+        <div className="w-full" style={{ overflowX: "auto" }}>
+          <table className="w-full mt-2">
+            <tr className="font-semibold">
+              <td>Item</td>
+              <td>Full Year</td>
+              <td>Proporsional</td>
+              <td>Realisasi</td>
+            </tr>
+            <tr>
+              <td>Tabungan</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+            </tr>
+            <tr>
+              <td>Giro</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+            </tr>
+            <tr>
+              <td>Deposito</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+            </tr>
+            <tr className="font-semibold">
+              <td>Total</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+              <td>212.366.039</td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div>
         <div>% Achievement</div>

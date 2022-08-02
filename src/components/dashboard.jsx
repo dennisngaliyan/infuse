@@ -40,13 +40,13 @@ function Dashboard() {
   };
   return (
     <div className="p-5 border border-black rounded-md">
-      <div className="text-xl">Posting date : dd-mm-yyyy</div>
+      <div className="text-xl">Posting date : {new Date().toISOString().slice(0, 10)}</div>
       <div className="w-full flex flex-col mt-6 h-full">
-        <div className="w-full flex gap-2">
+        <div className="w-full flex flex-col md:flex-row gap-2">
           <div
             onClick={() => setPerformance("overall")}
             style={{ borderRadius: "0 0 20px 20px" }}
-            className={`${performance === "overall" ? "bg-[#1363DF] text-white" : ""} font-semibold p-3 bg-primary text-black cursor-pointer flex justify-between items-center`}
+            className={`${performance === "overall" ? "bg-primary text-white" : "bg-blue text-white"} font-semibold p-3   cursor-pointer flex justify-between items-center`}
             id="overall"
           >
             Overall Performance
@@ -54,7 +54,7 @@ function Dashboard() {
           <div
             onClick={() => setPerformance("cabang")}
             style={{ borderRadius: "0 0 20px 20px" }}
-            className={`${performance === "cabang" ? "bg-[#1363DF] text-white" : ""} font-semibold p-3 bg-primary text-black cursor-pointer flex items-center justify-between`}
+            className={`${performance === "cabang" ? "bg-primary text-white" : "bg-blue text-white"} font-semibold p-3   cursor-pointer flex items-center justify-between`}
             id="cabang"
           >
             Performance Cabang
@@ -62,7 +62,7 @@ function Dashboard() {
           <div
             onClick={() => setPerformance("kcp")}
             style={{ borderRadius: "0 0 20px 20px" }}
-            className={`${performance === "kcp" ? "bg-[#1363DF] text-white" : ""} font-semibold p-3 bg-primary text-black cursor-pointer flex items-center justify-between`}
+            className={`${performance === "kcp" ? "bg-primary text-white" : "bg-blue text-white"} font-semibold p-3   cursor-pointer flex items-center justify-between`}
             id="cabang"
           >
             Performance KCP/KK
@@ -70,41 +70,43 @@ function Dashboard() {
         </div>
         <div className="w-full mt-12">
           {performance === "overall" && (
-            <div className="grid grid-cols-3 gap-6">
+            <div className="flex flex-col lg:grid grid-cols-3 gap-6">
               <div className="col-span-2 w-full">
                 <div className="font-semibold">Target vs Realisasi</div>
-                <table className="w-full mt-2">
-                  <tr className="font-semibold">
-                    <td>Item</td>
-                    <td>Full Year</td>
-                    <td>Proporsional</td>
-                    <td>Realisasi</td>
-                  </tr>
-                  <tr>
-                    <td>Tabungan</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                  </tr>
-                  <tr>
-                    <td>Giro</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                  </tr>
-                  <tr>
-                    <td>Deposito</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                  </tr>
-                  <tr className="font-semibold">
-                    <td>Total</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                    <td>212.366.039</td>
-                  </tr>
-                </table>
+                <div className="w-full" style={{ overflowX: "auto" }}>
+                  <table className="w-full mt-2">
+                    <tr className="font-semibold">
+                      <td>Item</td>
+                      <td>Full Year</td>
+                      <td>Proporsional</td>
+                      <td>Realisasi</td>
+                    </tr>
+                    <tr>
+                      <td>Tabungan</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                    </tr>
+                    <tr>
+                      <td>Giro</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                    </tr>
+                    <tr>
+                      <td>Deposito</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                    </tr>
+                    <tr className="font-semibold">
+                      <td>Total</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                      <td>212.366.039</td>
+                    </tr>
+                  </table>
+                </div>
               </div>
               <div>
                 <div>% Achievement</div>
@@ -113,6 +115,7 @@ function Dashboard() {
               </div>
               {/* Row 2  */}
               <div className="w-full h-[20rem]">
+                <div className="font-semibold">Realisasi</div>
                 <Line />
               </div>
               <div>
@@ -126,7 +129,7 @@ function Dashboard() {
           )}
           {performance === "cabang" &&
             (detail.cabang === "" || detail.periode === "" ? (
-              <div className="flex items-center gap-5">
+              <div className="flex flex-col md:flex-row items-center gap-5">
                 <div className="flex items-center gap-2">
                   <div>Cabang :</div>
                   <select onChange={(e) => optionHandler(e)} name="cabang" className="pr-5 border">
@@ -151,36 +154,38 @@ function Dashboard() {
               </div>
             ) : !detail1Active ? (
               <div className="">
-                <div className="flex items-center gap-12 p-3 border border-black-300 w-fit">
-                  <div className="font-bold">Cabang : {detail.cabang} </div>
-                  <div className="font-bold">Periode : {detail.periode} </div>
+                <div className="flex items-center gap-12 p-3 w-fit mb-12 bg-primary text-white rounded-md">
+                  <div className="font-semibold">Cabang : {detail.cabang} </div>
+                  <div className="font-semibold">Periode : {detail.periode} </div>
                 </div>
-                <div className="flex items-center">
-                  <div className="h-[30rem] w-full">
+                <div className="flex flex-col lg:flex-row items-center">
+                  <div className="h-full lg:h-[30rem] w-full">
                     <Pie />
                   </div>
                   <div className="w-full">
                     <div className="h-[15rem] w-full">
-                      <Stacked setDetailActive={setDetail1Active} />
+                      <div>% FY</div>
+                      <Stacked colorBar="yellow" setDetailActive={setDetail1Active} />
                     </div>
                     <div className="h-[15rem] w-full">
-                      <Stacked setDetailActive={setDetail1Active} />
+                      <div>% Prop</div>
+                      <Stacked colorBar="blue" setDetailActive={setDetail1Active} />
                     </div>
                   </div>
                 </div>
               </div>
             ) : (
               <div>
-                <div className="flex items-center gap-12 p-3 border border-black-300 w-fit mb-12">
-                  <div className="font-bold">Cabang : {detail.cabang} </div>
-                  <div className="font-bold">Periode : {detail.periode} </div>
+                <div className="flex items-center gap-12 p-3 w-fit mb-12 bg-primary text-white rounded-md">
+                  <div className="font-semibold">Cabang : {detail.cabang} </div>
+                  <div className="font-semibold">Periode : {detail.periode} </div>
                 </div>
                 <Package />
               </div>
             ))}
           {performance === "kcp" &&
             (detail2.kcp === "" || detail2.periode === "" ? (
-              <div className="flex items-center gap-5">
+              <div className="flex flex-col md:flex-row items-center gap-5">
                 <div className="flex items-center gap-2">
                   <div>KCP :</div>
                   <select onChange={(e) => optionHandler2(e)} name="kcp" className="pr-5 border">
@@ -205,40 +210,35 @@ function Dashboard() {
               </div>
             ) : !detail2Active ? (
               <div className="">
-                <div className="flex items-center gap-12 p-3 border border-black-300 w-fit">
-                  <div className="font-bold">KCP : {detail2.kcp} </div>
-                  <div className="font-bold">Periode : {detail2.periode} </div>
+                <div className="flex items-center gap-12 p-3 w-fit mb-12 bg-primary text-white rounded-md">
+                  <div className="font-semibold">KCP : {detail2.kcp} </div>
+                  <div className="font-semibold">Periode : {detail2.periode} </div>
                 </div>
-                <div className="flex items-center">
-                  <div className="h-[30rem] w-full">
+                <div className="flex flex-col lg:flex-row items-center">
+                  <div className="h-full lg:h-[30rem] w-full">
                     <Pie />
                   </div>
                   <div className="w-full">
                     <div className="h-[15rem] w-full">
-                      <Stacked setDetailActive={setDetail2Active} />
+                      <div>% FY</div>
+                      <Stacked colorBar="yellow" setDetailActive={setDetail2Active} />
                     </div>
                     <div className="h-[15rem] w-full">
-                      <Stacked setDetailActive={setDetail2Active} />
+                      <div>% Prop</div>
+                      <Stacked colorBar="blue" setDetailActive={setDetail2Active} />
                     </div>
                   </div>
                 </div>
               </div>
             ) : (
               <div>
-                <div className="flex items-center gap-12 p-3 border border-black-300 w-fit mb-12">
-                  <div className="font-bold">KCP : {detail2.kcp} </div>
-                  <div className="font-bold">Periode : {detail2.periode} </div>
+                <div className="flex items-center gap-12 p-3 w-fit mb-12 bg-primary text-white rounded-md">
+                  <div className="font-semibold">KCP : {detail2.kcp} </div>
+                  <div className="font-semibold">Periode : {detail2.periode} </div>
                 </div>
                 <Package />
               </div>
             ))}
-          {/* {chart === "cabang" && (
-            <div className="w-full flex flex-col gap-5">
-              <Cylinder cabang={cabang} />
-              <div className="text-2xl font-semibold">Target vs Realisasi</div>
-              <Stacked title={title} />
-            </div>
-          )} */}
         </div>
       </div>
     </div>

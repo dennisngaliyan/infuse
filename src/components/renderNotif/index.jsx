@@ -3,7 +3,7 @@ import Images from "../../images";
 
 function RenderNotif({ title, description }) {
   return (
-    <div className="bg-primary w-full rounded-md p-3 text-black">
+    <div className="bg-primary w-full rounded-md p-3 text-white">
       <div className="font-bold flex items-center justify-between">
         <div className="flex gap-3">
           <div>{title}</div>

@@ -9,10 +9,10 @@ module.exports = {
         // FF0063 => primary red
         // FC5185
         //3AB4F2 => blue
-        'primary': '#e0e0eb',
-        'secondary': '#3AB4F2',
+        'primary': "#4D77FF",
+        'blue': '#1363DF',
+        'secondary': '#00D7FF',
         'red': "#ABC9FF",
-        'blue': "#4D77FF",
         'gray': '#8492a6',
       }
     },

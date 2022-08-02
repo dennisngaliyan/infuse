@@ -44,12 +44,18 @@ li:not(:first-child) {
 table,
 tr,
 td {
-  border: 1px solid black;
+  border: 0.25px solid black;
   text-align: center;
 }
 
 td {
   padding: 10px;
+}
+
+.custom-bg {
+  background: url("./images/digital.webp");
+  background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (max-width: 769px) {
