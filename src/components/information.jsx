@@ -3,7 +3,7 @@ import RenderNotif from "./renderNotif";
 
 function Information() {
   return (
-    <div className="p-5 border border-gray rounded-md flex flex-col gap-5">
+    <div className="p-5 border border-black rounded-md flex flex-col gap-5">
       <RenderNotif
         title="Pemberitahuan"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vitae eros interdum, congue neque ac, interdum ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus molestie orci. Duis non nibh sed leo

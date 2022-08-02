@@ -3,7 +3,7 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
-function Stacked({ title, setDetailActive }) {
+function Bar({ title }) {
   const stackContainer = useRef(null);
 
   useEffect(() => {
@@ -15,55 +15,30 @@ function Stacked({ title, setDetailActive }) {
       // Create chart instance
       var chart = am4core.create(stackContainer.current, am4charts.XYChart3D);
 
-      chart.colors.list = [am4core.color("#1363DF"), am4core.color("#F7EC09")];
+      chart.colors.list = [am4core.color("#FFF89C"), am4core.color("#1363DF")];
 
       // Add data
       chart.data = [
         {
-          country: "KC A",
-          year2017: 35,
-          year2018: 42,
+          country: "Tabungan",
+          year2017: 97.5,
+          year2018: 98,
         },
         {
-          country: "KC B",
-          year2017: 70,
-          year2018: 82,
+          country: "Giro",
+          year2017: 99.2,
+          year2018: 99.7,
         },
         {
-          country: "KC C",
-          year2017: 50,
-          year2018: 42,
+          country: "Depostio",
+          year2017: 107.3,
+          year2018: 108.2,
         },
         {
-          country: "KC D",
-          year2017: 75,
-          year2018: 78,
+          country: "Total",
+          year2017: 101,
+          year2018: 102,
         },
-        {
-          country: "KC E",
-          year2017: 60,
-          year2018: 65,
-        },
-        {
-          country: "KC F",
-          year2017: 55,
-          year2018: 49,
-        },
-        {
-          country: "KC G",
-          year2017: 63,
-          year2018: 60,
-        },
-        // {
-        //   country: "India",
-        //   year2017: 8,
-        //   year2018: 7.1,
-        // },
-        // {
-        //   country: "China",
-        //   year2017: 9.9,
-        //   year2018: 10.1,
-        // },
       ];
 
       // Create axes
@@ -95,7 +70,7 @@ function Stacked({ title, setDetailActive }) {
       series2.columns.template.tooltipText = "GDP grow in {category} (2022): [bold]{valueY}%[/]";
     }); // end am4core.ready()
   }, [title]);
-  return <div onClick={() => setDetailActive(true)} className="cursor-pointer w-full h-full" ref={stackContainer}></div>;
+  return <div className="w-full h-full" ref={stackContainer}></div>;
 }
 
-export default Stacked;
+export default Bar;

@@ -41,9 +41,10 @@ li:not(:first-child) {
   padding-left: 2rem;
 }
 
+table,
 tr,
 td {
-  border: 1px solid #8492a6;
+  border: 1px solid black;
   text-align: center;
 }
 

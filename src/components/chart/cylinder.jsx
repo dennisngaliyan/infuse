@@ -100,7 +100,7 @@ function Cylinder({ cabang }) {
 
       var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
       valueAxis.renderer.grid.template.disabled = false;
-      valueAxis.title.text = `Performance Cabang ${cabang}`;
+      // valueAxis.title.text = `Performance Cabang ${cabang}`;
       valueAxis.renderer.labels.template.adapter.add("text", function (text) {
         return text + "%";
       });
@@ -120,7 +120,7 @@ function Cylinder({ cabang }) {
       });
     }); // end am4core.ready()
   }, [cabang]);
-  return <div ref={chartContainer} className="w-full h-[30rem]" id="chartdiv"></div>;
+  return <div ref={chartContainer} className="w-full h-full" id="chartdiv"></div>;
 }
 
 export default Cylinder;

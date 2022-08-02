@@ -18,7 +18,7 @@ function Main() {
             <img className="w-[8rem] h-[3rem]" src={Images.logo} alt="" />
             <img onClick={() => setHide(true)} className="lg:hidden w-[2rem] h-[2rem]" src={Images.back} alt="" />
           </div>
-          <div className="flex flex-col text-white mt-12 gap-5">
+          <div className="flex flex-col text-black mt-12 gap-5">
             <Navigation title="Home" icon={Images.home} active={active} setActive={setActive} />
             <Navigation title="Dashboard" icon={Images.dashboard} active={active} setActive={setActive} />
             <Navigation title="Report" icon={Images.report} active={active} setActive={setActive} />
@@ -26,7 +26,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <div className="w-full max-h-screen pb-12 md:pb-0" style={{ overflowY: "auto" }}>
+      <div className="w-full max-h-screen pb-12 md:pb-0 bg-[#ABC9FF]" style={{ overflowY: "auto" }}>
         <div className="w-full flex p-5 justify-between">
           <img onClick={() => setHide(!hide)} className="w-[2rem] h-[2rem] cursor-pointer" src={Images.menu} alt="" />
           <img onClick={() => navigate("/")} className="w-[2rem] h-[2rem] cursor-pointer" src={Images.exit} alt="" />
