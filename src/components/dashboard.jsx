@@ -104,7 +104,7 @@ function Dashboard() {
                       <td>Total</td>
                       <td>625.449.702</td>
                       <td>632.417.638</td>
-                      <td>632.539.824</td>
+                      <td>621,040,201</td>
                     </tr>
                   </table>
                 </div>
