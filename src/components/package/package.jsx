@@ -1,5 +1,6 @@
 import React from "react";
 import Bar from "../chart/bar";
+import Bar2 from "../chart/bar2";
 import Line from "../chart/line";
 import Pie from "../chart/pie";
 
@@ -21,7 +22,7 @@ function Package() {
             <tr>
               <td>KCP A</td>
               <td>212.366.039</td>
-              <td>212.210.322.021</td>
+              <td>210.322.021</td>
               <td>207.009.337</td>
               <td>97.5%</td>
               <td>98.4%</td>
@@ -99,7 +100,7 @@ function Package() {
       </div>
       <div>
         <div>Proporsional</div>
-        <Bar />
+        <Bar2 />
       </div>
     </div>
   );
