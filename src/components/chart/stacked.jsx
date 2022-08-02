@@ -23,8 +23,8 @@ function Stacked({ title, setDetailActive, colorBar }) {
       chart.data = [
         {
           country: "KC A",
-          year2017: 97.5,
-          year2018: 98.4,
+          year2017: 98.4,
+          year2018: 97.5,
         },
         {
           country: "KC B",
@@ -33,28 +33,28 @@ function Stacked({ title, setDetailActive, colorBar }) {
         },
         {
           country: "KC C",
-          year2017: 100.9,
-          year2018: 100.4,
+          year2017: 100.4,
+          year2018: 100.9,
         },
         {
           country: "KC D",
-          year2017: 100.0,
-          year2018: 98.9,
+          year2017: 98.9,
+          year2018: 100.0,
         },
         {
           country: "KC E",
-          year2017: 99.8,
-          year2018: 99.7,
+          year2017: 99.7,
+          year2018: 99.8,
         },
         {
           country: "KC F",
-          year2017: 101.2,
-          year2018: 100.1,
+          year2017: 100.1,
+          year2018: 101.2,
         },
         {
           country: "KC G",
-          year2017: 101.1,
-          year2018: 101.9,
+          year2017: 101.9,
+          year2018: 101.1,
         },
         // {
         //   country: "India",
