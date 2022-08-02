@@ -6,14 +6,14 @@ function Login() {
   const navigate = useNavigate();
   return (
     <div className="relative w-full h-screen flex items-center justify-center custom-bg">
-      <img src={BNI} alt="" className="absolute left-[2%] top-[2%] w-[7rem] h-[3rem]" />
+      {/* <img src={BNI} alt="" className="absolute left-[2%] top-[2%] w-[7rem] h-[3rem]" />
       <div className="text-white font-bold right-[2%] bottom-[2%] absolute text-[1.5rem] text-right">
         <div>INtegrated</div>
         <div>FUnd</div>
         <div>System</div>
         <div>ManagEment</div>
         <div>(INFUSE)</div>
-      </div>
+      </div> */}
       <div className="w-[90%] md:w-[50%] lg:w-[35%] bg-white rounded-xl p-10">
         <div className="pb-5 text-center text-3xl font-bold text-blue">Login</div>
         <form className="flex flex-col gap-5">

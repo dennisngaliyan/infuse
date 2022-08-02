@@ -19,34 +19,34 @@ function Line() {
       chart.data = [
         {
           year: "Jan",
-          income: 23.5,
+          income: 150000000,
           expenses: 21.1,
           lineColor: chart.colors.next(),
         },
         {
           year: "Feb",
-          income: 26.2,
+          income: 125000000,
           expenses: 30.5,
         },
         {
           year: "Mar",
-          income: 30.1,
+          income: 145000000,
           expenses: 34.9,
         },
         {
           year: "April",
-          income: 20.5,
+          income: 140000000,
           expenses: 23.1,
         },
         {
           year: "Mei",
-          income: 30.6,
+          income: 150000000,
           expenses: 28.2,
           lineColor: chart.colors.next(),
         },
         {
           year: "Jun",
-          income: 34.1,
+          income: 125000000,
           expenses: 31.9,
         },
       ];

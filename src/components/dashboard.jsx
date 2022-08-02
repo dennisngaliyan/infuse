@@ -6,6 +6,7 @@ import Bar from "./chart/bar";
 import Line from "./chart/line";
 import Pie from "./chart/pie";
 import Package from "./package/package";
+import Bar2 from "./chart/bar2";
 
 function Dashboard() {
   const [performance, setPerformance] = useState("overall");
@@ -84,26 +85,26 @@ function Dashboard() {
                     <tr>
                       <td>Tabungan</td>
                       <td>212.366.039</td>
-                      <td>212.366.039</td>
-                      <td>212.366.039</td>
+                      <td>212.095.729</td>
+                      <td>207.009.337</td>
                     </tr>
                     <tr>
                       <td>Giro</td>
-                      <td>212.366.039</td>
-                      <td>212.366.039</td>
-                      <td>212.366.039</td>
+                      <td>219.401.655</td>
+                      <td>223.443.336</td>
+                      <td>217.729.106</td>
                     </tr>
                     <tr>
                       <td>Deposito</td>
-                      <td>212.366.039</td>
-                      <td>212.366.039</td>
-                      <td>212.366.039</td>
+                      <td>193.682.008</td>
+                      <td>196.878.573</td>
+                      <td>207.801.381</td>
                     </tr>
                     <tr className="font-semibold">
                       <td>Total</td>
-                      <td>212.366.039</td>
-                      <td>212.366.039</td>
-                      <td>212.366.039</td>
+                      <td>625.449.702</td>
+                      <td>632.417.638</td>
+                      <td>632.539.824</td>
                     </tr>
                   </table>
                 </div>
@@ -123,7 +124,7 @@ function Dashboard() {
               </div>
               <div>
                 <div>Proporsional</div>
-                <Bar />
+                <Bar2 />
               </div>
             </div>
           )}

@@ -19,7 +19,7 @@ function Pie({ title }) {
       chart.data = [
         {
           country: "Tabungan",
-          litres: 35,
+          litres: 33,
         },
         {
           country: "Giro",
